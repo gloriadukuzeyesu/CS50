@@ -70,7 +70,7 @@ def new_page(request):
                 "error_message" : "Entry Page already Exists"
             })
         else:
-            util.save_entry(title, content)
+            util.save_entry(title, content) 
             html_content = convert_mark_down_to_Html(title)
             return render(request, "encyclopedia/entryTemplate.html", {
                 "title" : title, 
